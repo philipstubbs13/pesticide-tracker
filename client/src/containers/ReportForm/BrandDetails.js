@@ -64,6 +64,9 @@ class BrandDetails extends Component {
           <Typography variant="h5">
             Pesticide Application Record
           </Typography>
+          <Typography variant="subtitle">
+            Field Crop Pest Management
+          </Typography>
           <div className={classes.formContainer}>
             <Typography variant="h6">
               Step 7 of 7: Enter information about the pesticides applied.

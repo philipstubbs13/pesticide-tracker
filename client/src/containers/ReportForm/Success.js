@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 // import PropTypes for documenting/validating types for component's properties.
 import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
 // CSS in JS
 const styles = theme => ({
@@ -34,6 +36,9 @@ const styles = theme => ({
     marginTop: 20,
     color: 'var(--form-error-color)',
   },
+  profileBtn: {
+    marginTop: 30,
+  },
 });
 
 class Success extends Component {
@@ -54,8 +59,14 @@ class Success extends Component {
       <div className={classes.reportContainer}>
         <Paper className={classes.root} elevation={1}>
           <Typography variant="h5">
-            The form has been saved successfully.
+            Thank you for submitting this form.
           </Typography>
+          <Typography variant="subtitle1">
+            You can view all of your pesticide application records from your profile.
+          </Typography>
+          <Button className={classes.profileBtn} variant="outlined" color="primary" component={Link} to="/profile">
+            Go to profile
+          </Button>
         </Paper>
       </div>
     );
