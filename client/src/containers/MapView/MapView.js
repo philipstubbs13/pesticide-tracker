@@ -2,17 +2,14 @@
 import React, { Component } from 'react';
 // import PropTypes for documenting/validating types for component's properties.
 import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // Import google map react component
 import GoogleMapReact from 'google-map-react';
 // import material ui components and styling.
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import FormControl from '@material-ui/core/FormControl';
-import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
 
 // CSS in JS
 const styles = theme => ({
@@ -69,9 +66,9 @@ class MapView extends Component {
   static defaultProps = {
     center: {
       lat: 44.9778,
-      lng: -93.2650
+      lng: -93.2650,
     },
-    zoom: 11
+    zoom: 11,
   };
 
   render() {
