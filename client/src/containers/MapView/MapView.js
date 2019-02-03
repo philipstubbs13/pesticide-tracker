@@ -87,25 +87,25 @@ class MapView extends Component {
         <Typography variant="h4" className={classes.fieldsTitle}>Search pesticide application records</Typography>
         <div className={classes.mapViewContainer}>
           <div className={classes.fieldsList}>
-            <Paper className={classes.field} elevation={1}>
+            <Paper style={{ backgroundColor: '#efebe9' }} className={classes.field} elevation={1}>
               <Typography variant="h6">Black Hallow Farm</Typography>
               <Typography variant="subtitle1">Last application: August 18, 2018</Typography>
               <Typography variant="subtitle1">Crop: corn</Typography>
               <Typography variant="subtitle1">Product that field was treated with: 42-S Thiram Fungicide</Typography>
             </Paper>
-            <Paper className={classes.field} elevation={1}>
+            <Paper style={{ backgroundColor: '#efebe9' }} className={classes.field} elevation={1}>
               <Typography variant="h6">Robinwood Farm</Typography>
               <Typography variant="subtitle1">Last application: May 3, 2018</Typography>
               <Typography variant="subtitle1">Crop: soybeans</Typography>
               <Typography variant="subtitle1">Product that field was treated with: 2, 4-D Amine Weed Killer</Typography>
             </Paper>
-            <Paper className={classes.field} elevation={1}>
+            <Paper style={{ backgroundColor: '#efebe9' }} className={classes.field} elevation={1}>
               <Typography variant="h6">Nightfall farm</Typography>
               <Typography variant="subtitle1">Last application: July 10, 2017</Typography>
               <Typography variant="subtitle1">Crop: potatoes</Typography>
               <Typography variant="subtitle1">Product that field was treated with: 2, 4-D Ester 4</Typography>
             </Paper>
-            <Paper className={classes.field} elevation={1}>
+            <Paper style={{ backgroundColor: '#efebe9' }} className={classes.field} elevation={1}>
               <Typography variant="h6">Eastwood farm</Typography>
               <Typography variant="subtitle1">Last application: June 31, 2016</Typography>
               <Typography variant="subtitle1">Crop: apples</Typography>
