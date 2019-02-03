@@ -44,7 +44,7 @@ class NavBar extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const { classes, handleLogout, user } = this.props;
     const { auth, anchorEl } = this.state;
     const open = Boolean(anchorEl);
 
@@ -58,7 +58,7 @@ class NavBar extends React.Component {
             <Typography variant="h6" color="inherit" className={classes.grow} component={Link} to="/">
               Pesticide Tracker
             </Typography>
-            {auth && (
+            {user && (
               <div>
                 <IconButton
                   aria-owns={open ? 'menu-appbar' : undefined}
@@ -69,7 +69,7 @@ class NavBar extends React.Component {
                 >
                   <AccountCircle />
                 </IconButton>
-                <Button color="inherit">Sign out</Button>
+                <Button color="inherit" onClick={handleLogout} component={Link} to="/signin">Sign out</Button>
                 <Menu
                   id="menu-appbar"
                   anchorEl={anchorEl}
