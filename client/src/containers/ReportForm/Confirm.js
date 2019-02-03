@@ -18,6 +18,12 @@ const styles = theme => ({
     width: '45%',
     border: '1px solid var(--app-dark-color)',
     textAlign: 'center',
+    [theme.breakpoints.down('sm')]: {
+      width: '75%',
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: '90%',
+    },
   },
   reportContainer: {
     display: 'flex',
