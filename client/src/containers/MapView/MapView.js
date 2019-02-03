@@ -111,25 +111,26 @@ class MapView extends Component {
               <Typography variant="h6">Black Hallow Farm</Typography>
               <Typography variant="subtitle1">Type of crop affected: corn</Typography>
               <Typography variant="subtitle1">Chemical product that field was treated with: 42-S Thiram Fungicide</Typography>
-              <Button variant="outlined" color="primary">View Details</Button>
+              <Button variant="outlined" component={Link} to="/viewchemicals" color="primary"> View Details 
+              </Button>
             </Paper>
             <Paper style={{ backgroundColor: '#efebe9' }} className={classes.field} elevation={1}>
               <Typography variant="h6">Robinwood Farm</Typography>
               <Typography variant="subtitle1">Type of crop affected: soybeans</Typography>
               <Typography variant="subtitle1">Product that field was treated with: 2, 4-D Amine Weed Killer</Typography>
-              <Button variant="outlined" color="primary">View Details</Button>
+              <Button variant="outlined" color="primary" component={Link} to="/viewchemicals" color="primary">View Details</Button>
             </Paper>
             <Paper style={{ backgroundColor: '#efebe9' }} className={classes.field} elevation={1}>
               <Typography variant="h6">Nightfall farm</Typography>
               <Typography variant="subtitle1">Type of crop affected: potatoes</Typography>
               <Typography variant="subtitle1">Product that field was treated with: 2, 4-D Ester 4</Typography>
-              <Button variant="outlined" color="primary">View Details</Button>
+              <Button variant="outlined" color="primary" component={Link} to="/viewchemicals" color="primary">View Details</Button>
             </Paper>
             <Paper style={{ backgroundColor: '#efebe9' }} className={classes.field} elevation={1}>
               <Typography variant="h6">Eastwood farm</Typography>
               <Typography variant="subtitle1">Type of crop affected: apples</Typography>
               <Typography variant="subtitle1">Product that field was treated with: Accent Gold Herbicide</Typography>
-              <Button variant="outlined" color="primary">View Details</Button>
+              <Button variant="outlined" color="primary" component={Link} to="/viewchemicals" color="primary">View Details</Button>
             </Paper>
             <Button variant="outlined" color="primary" className={classes.loadMore} color="primary">
               Load More

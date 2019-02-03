@@ -144,7 +144,7 @@ class App extends Component {
                       )}
                     />
                     <Route exact path="/" component={MapView} />
-                    <Route exact path="/details" component={ViewChemicals} />
+                    <Route exact path="/viewchemicals" component={ViewChemicals} />
                     <Route component={MapView} />
                   </Switch>
                 ) : (
