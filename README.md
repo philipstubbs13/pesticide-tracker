@@ -80,17 +80,17 @@ The following packages are dependencies to the project.
 * [react](https://www.npmjs.com/package/react)
   * This package contains the functionality necessary to define React components.
 * [react-dom](https://www.npmjs.com/package/react-dom)
-  * This serves as the entry point of the DOM-related rendering paths
+  * This serves as the entry point of the DOM-related rendering paths.
 * [react-router-dom](https://www.npmjs.com/package/react-router-dom)
   * This is a third party routing library use to connect and link different components across the app.
 * [react-scripts](https://www.npmjs.com/package/react-scripts)
   * This includes scripts and configuration used by Create React App.
-* [firebase](https://github.com/leoasis/react-sound)
+* [firebase](https://firebase.google.com/)
   * Firebase provides the infastructure for a real time database within the application as well a platform for deploying and hosting.
 * [google-map-react](https://github.com/google-map-react/google-map-react)
   * This package is used to generate a Google map and markers to mark pesticide application locations within the application.
 
-This project also uses ESLint and the Airbnb JavaScript style guide to help maintain code quality. ESLint includes the following dev dependencies:
+This project also uses ESLint and the Airbnb JavaScript style guide to design better code and help maintain clean, easy-to-read code. ESLint includes the following dev dependencies:
 
 * babel-eslint
 * eslint
@@ -101,7 +101,7 @@ This project also uses ESLint and the Airbnb JavaScript style guide to help main
 
 For more information on the Airbnb style guide, go [here](https://github.com/airbnb/javascript).
 
-Version information for each of these packages is available in the <b>package.json</b> file in the project root directory.
+Version information for each of these packages is available in the <b>package.json</b> file in the <b>client</b> directory.
 
 ###  <a name="start-server"></a> 5. Start the React development server.
 
@@ -127,6 +127,8 @@ After the development server has started, a browser window should open, and you 
 
 <img src="./readme_images/record.png">
 
+<img src="./readme_images/record2.png">
+
 ### Profile and History page
 
 <img src="./readme_images/profile.png">
@@ -135,21 +137,27 @@ After the development server has started, a browser window should open, and you 
 
 ### <a name="how-the-app-is-built"></a> How the app is built
 
-This project is built using [React](https://reactjs.org/), which is an open source JavaScript library developed at Facebook specifically for the task of developing user interfaces. React relies on a component-based architecture where elements of the user interface are broken into small chunks of code called components. To design and build the user interface, I used the [Material UI](https://material-ui.com/) library, which is a 3rd party UI library of React components that mimic Google's [Material Design specification](https://material.io/). I used Material UI for styling, theming, and incorporating cool components. As to the grid/layout system I used, I went with Flexbox, making it easy to design for smaller screens.
+This project is built using [React](https://reactjs.org/), which is an open source JavaScript library developed at Facebook specifically for the task of developing user interfaces. React relies on a component-based architecture where elements of the user interface are broken into small chunks of code called components. To design and build the user interface, we used the [Material UI](https://material-ui.com/) library, which is a 3rd party UI library of React components that mimic Google's [Material Design specification](https://material.io/). We used Material UI for styling, theming, and incorporating cool components. As to the grid/layout system we used, we went with Flexbox, making it easy to design for smaller screens.
 
-This project also uses Google's Firebase Real Time Database to store data from a pestacide dataset from the U.S. Environment Protection Agency (EPA). The dataset includes information about different chemical products used to treat fields across the U.S and outside the U.S. However, for this project, we limited the scope to only Minnesota.
+This project also uses Google's Firebase Real Time Database to store data from a pestacide dataset from the U.S. Food and Drug Administration (FDA). The dataset includes information about different chemical products used to treat fields across the U.S and outside the U.S. However, for this project, we limited the scope to only Minnesota. For more information on the dataset we used for this project, go [here](https://www.fda.gov/food/foodborneillnesscontaminants/pesticides/ucm2006797.htm).
 
 ### <a name="workflow"></a> App workflow
 
 #### Authentication
 
+When you visit the web app for the first time, you will be taken to the Sign in page. To log into the app, you can log in with your Google account. In a future development sprint, we also plan to add other methods of authentication, such as email/password authentication. The reason that we require you to log in is to provide you with a more personalized experience. By authenticating with the app, you can manage, create, and store any of your pesticide application records that are [required by government regulators](https://www.revisor.mn.gov/statutes/cite/18B.37). This makes it super easy to have all record all in one place in case a government regulatory or other entity requests that information from you in the future. The app also requires you to authenticate so that we can provide Google Maps images of each field/area.
+
 #### Landing Page
 
-#### Profile and History Page
+After you authenticate, you will be taken to the landing page, the landing page is where you can see a Google Map image of each field/area as well as additional information like type of crop and the product(s) that were used to treat the area. For each location, there is also a <b>VIEW DETAILS</b> button. Click this button to learn more about the chemical products/pesticides and where they are located/concentrated throughout the state of Minnesota. For this project, we used and got this pesticide concentration data from the U.S. FDA. The dataset can be found [here](https://www.fda.gov/food/foodborneillnesscontaminants/pesticides/ucm2006797.htm). For this project, we imported the data into a Firebase Real Time Database so that we can display this information to you within the app in REAL TIME.
 
 #### Create Pesticide Application Record Form/Template
 
-#### Log out
+On the top of the landing page, you also probably noticed a button labeled <b>CREATE PESTICIDE APPLICATION RECORD</b>. This button takes you to a multi-step form that walks you through all the information required by government regulators to record and keep track of when applying pesticides to a site. For more information on all the information that is required, see [here](https://www.revisor.mn.gov/statutes/cite/18B.37). To help those who need to manage these records, the Minnesota Department of Agriculture provides a [template form](https://www.mda.state.mn.us/sites/default/files/inline-files/catc-fieldcrop_0.pdf). But, the problem is that there is no effective way to keep track of and manage that information, especially since the government requires people to retain these records for 5 years. So, to streamline this process, we added a simple form to the app that you can fill out and save within the web app.
+
+#### Profile and History Page
+
+* The final page within the app is the Profile and History page. This is where you can edit information about yourself and can be populated on the create pesticide application form to help get through the forms quickly and with minimum to no errors. In a future state of the app, you will also be able to view a history of records (not quite there yet).
 
 ### <a name="project-structure"></a> Structure of the project
 
