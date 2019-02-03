@@ -37,7 +37,7 @@ const styles = theme => ({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    marginTop: -30,
+    marginTop: 0,
     marginBottom: 30,
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
