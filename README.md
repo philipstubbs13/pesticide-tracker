@@ -1,5 +1,15 @@
 # Pesticide Tracker
 
+When we started this project, our goal was to improve farmer livelihood by using data to:
+
+* Increase productivity and access to markets
+* Promote agricultural practices that support a more sustainable future
+* Strengthen agricultural communities
+
+Our inspiration for this app came from the fact that there is so much data out there about pesticide levels/concentration in crops, such as this [data](https://www.fda.gov/food/foodborneillnesscontaminants/pesticides/ucm2006797.htm) from the FDA, and very little being done to use that data to make people's lives more simple. Also, in Minnesota, it is required to maintain a record of pesticides used on each site for at least five years, and each record requires a certain amount of information about the location, company, applicator, pesticides, and more.
+
+So, what is our solution? Our solution is a web-based (and mobile) app that supports a more sustainable future by better tracking locations over time where pesticides are applied to help identify, predict, and take action on trouble areas in the future. The app also increases productivity by having ONE APP to manage, save, and store pesticide data/records efficiently and effectively. Although, this app is limited to Minnesota agricultural communities now, we believe that it will also strenthen not only communities across the states but also in other countries. Specifically, other countries that are less technologically advanced and don't have the resources to support a more sustainable future. By better documenting pesticide concentrations and patterns, we belive that this app could eventually (way way way down the road) help developing countries learn from more developed countries how to be more efficient and effective agriculturally.
+
 ## Table Number and Project Team
 
 Table Number: 26
@@ -145,7 +155,7 @@ This project also uses Google's Firebase Real Time Database to store data from a
 
 #### Authentication
 
-When you visit the web app for the first time, you will be taken to the Sign in page. To log into the app, you can log in with your Google account. In a future development sprint, we also plan to add other methods of authentication, such as email/password authentication. The reason that we require you to log in is to provide you with a more personalized experience. By authenticating with the app, you can manage, create, and store any of your pesticide application records that are [required by government regulators](https://www.revisor.mn.gov/statutes/cite/18B.37). This makes it super easy to have all record all in one place in case a government regulatory or other entity requests that information from you in the future. The app also requires you to authenticate so that we can provide Google Maps images of each field/area.
+When you visit the web app for the first time, you will be taken to the Sign in page. To log into the app, you can log in with your Google account. In a future development sprint, we also plan to add other methods of authentication, such as email/password authentication. The reason that we require you to log in is to provide you with a more personalized experience. By authenticating with the app, you can manage, create, and store any of your pesticide application records that are [required by government regulators](https://www.revisor.mn.gov/statutes/cite/18B.37). This makes it super easy to have all records all in one place in case a government regulatory or other entity requests that information from you in the future. The app also requires you to authenticate so that we can provide Google Maps images of each field/area.
 
 #### Landing Page
 
@@ -153,11 +163,11 @@ After you authenticate, you will be taken to the landing page, the landing page 
 
 #### Create Pesticide Application Record Form/Template
 
-On the top of the landing page, you also probably noticed a button labeled <b>CREATE PESTICIDE APPLICATION RECORD</b>. This button takes you to a multi-step form that walks you through all the information required by government regulators to record and keep track of when applying pesticides to a site. For more information on all the information that is required, see [here](https://www.revisor.mn.gov/statutes/cite/18B.37). To help those who need to manage these records, the Minnesota Department of Agriculture provides a [template form](https://www.mda.state.mn.us/sites/default/files/inline-files/catc-fieldcrop_0.pdf). But, the problem is that there is no effective way to keep track of and manage that information, especially since the government requires people to retain these records for 5 years. So, to streamline this process, we added a simple form to the app that you can fill out and save within the web app.
+On the top of the landing page, you also probably noticed a button labeled <b>CREATE PESTICIDE APPLICATION RECORD</b>. This button takes you to a multi-step form that walks you through all the information required by government regulators to record and keep track of when applying pesticides to a site. For more information on all the information that is required, go [here](https://www.revisor.mn.gov/statutes/cite/18B.37). To help those people who need to manage these records and keep track of them over time, the Minnesota Department of Agriculture provides a [template form](https://www.mda.state.mn.us/sites/default/files/inline-files/catc-fieldcrop_0.pdf). But, the problem is that there is no effective way to keep track of and manage that information, especially since the government requires people to retain these records for at least 5 years. So, to streamline this process, we added a simple form to the app that you can fill out, save, and store all within the web app.
 
 #### Profile and History Page
 
-* The final page within the app is the Profile and History page. This is where you can edit information about yourself and can be populated on the create pesticide application form to help get through the forms quickly and with minimum to no errors. In a future state of the app, you will also be able to view a history of records (not quite there yet).
+The final page within the app is the Profile and History page. This is where you can edit information about yourself and can be populated on the create pesticide application form to help get you through the forms quickly and with minimum to no errors. In a future state of the app, you will also be able to view a history of records (not quite there yet).
 
 ### <a name="project-structure"></a> Structure of the project
 
@@ -195,6 +205,8 @@ The following is a list of potential enhancements for future code development.
 * Update authentication workflow to add email/password authentication in addition to Google authentication.
 * Add search/filtering feature that allows a user to quickly search/filter through their create pesticide application record forms through the History section on the Profile page.
 * Perform usability testing to understand user needs and understand users' pain points. Then, make adjustments to the initial design.
+* For this project, we limited the scope to pesticide concentrations only in Minnesota. In a future development sprint, we would also like to expand this to other agricultural states in the U.S.
+* Eventually, we would like to take this outside of the U.S. as well. Specifically, we would like to use this app as a platform to connect agricultural communities in developed countries (like the U.S.) with agricultural countries that are less developed technologically (like Brazil or Indonesia). Obviously, this will be a huge challenge because just like the U.S. has the FDA, other countries have their own regulatory bodies with their own laws, regulations, and standards.
 
 ## <a name="deployment"></a> Deploying the app
 
