@@ -45,6 +45,9 @@ const styles = theme => ({
     marginTop: 20,
     color: 'var(--form-error-color)',
   },
+  subtitle: {
+    marginTop: 20,
+  },
 });
 
 // class based React component for Signup.
@@ -101,10 +104,18 @@ class Signin extends Component {
       <div className={classes.signinContainer}>
         <Paper className={classes.root} elevation={1}>
           <Typography variant="h4">
-            Signin
+            Sign In
           </Typography>
+          <div className={classes.subtitle}>
+            <Typography variant="subtitle">
+              Welcome to Pesticide Tracker.
+            </Typography>
+            <Typography variant="subtitle">
+              Please login with Google to continue.
+            </Typography>
+          </div>
           <div className={classes.formContainer}>
-            <FormControl fullWidth className={classes.formControl}>
+            {/* <FormControl fullWidth className={classes.formControl}>
               <TextField
                 id="username"
                 className={classes.textField}
@@ -136,12 +147,12 @@ class Signin extends Component {
                   shrink: true,
                 }}
               />
-            </FormControl>
-            <Typography variant="body1" className={classes.formError}>{error}</Typography>
-            <Button className={classes.submitSignupBtn} fullWidth variant="contained" color="primary" onClick={this.handleSubmit}>
+            </FormControl> */}
+            {/* <Typography variant="body1" className={classes.formError}>{error}</Typography> */}
+            {/* <Button className={classes.submitSignupBtn} fullWidth variant="contained" color="primary" onClick={this.handleSubmit}>
               Sign in
-            </Button>
-            <h3><span>Or</span></h3>
+            </Button> */}
+            {/* <h3><span>Or</span></h3> */}
             <button type="submit" className="loginBtn loginBtn--google" onClick={() => handleLogin()}>
               Login with Google
             </button>
