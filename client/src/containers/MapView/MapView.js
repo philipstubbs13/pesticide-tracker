@@ -20,6 +20,12 @@ const styles = theme => ({
     width: '45%',
     border: '1px solid var(--app-dark-color)',
     textAlign: 'center',
+    [theme.breakpoints.down('sm')]: {
+      width: '75%',
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: '90%',
+    },
   },
   createRecord: {
     display: 'flex',
@@ -33,6 +39,11 @@ const styles = theme => ({
     justifyContent: 'flex-start',
     marginTop: 0,
     marginBottom: 30,
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+    },
+
+    
   },
   searchRecordsContainer: {
     marginTop: 30,
@@ -41,6 +52,12 @@ const styles = theme => ({
     display: 'flex',
     flexDirection: 'column',
     width: '45%',
+    [theme.breakpoints.down('sm')]: {
+      width: '75%',
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: '90%',
+    },
   },
   fieldMap: {
     display: 'flex',
@@ -55,6 +72,12 @@ const styles = theme => ({
   },
   fieldsTitle: {
     marginTop: 30,
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'center',
+    },
+  },
+  loadMore: {
+    marginTop: 20,
   },
 });
 
@@ -108,6 +131,9 @@ class MapView extends Component {
               <Typography variant="subtitle1">Crop: apples</Typography>
               <Typography variant="subtitle1">Product that field was treated with: Accent Gold Herbicide</Typography>
             </Paper>
+            <Button variant="contained" className={classes.loadMore} color="primary">
+              Load More
+            </Button>
           </div>
           {/* Important! Always set the container height explicitly */}
           <div className={classes.fieldMap} style={{ marginTop: -150, height: '100vh', width: '90%', marginLeft: 30 }}>

@@ -156,6 +156,7 @@ class ReportForm extends Component {
         return (
           <ApplicatorDetails
             nextStep={this.nextStep}
+            prevStep={this.prevStep}
             handleChange={this.handleChange}
             values={values}
           />
