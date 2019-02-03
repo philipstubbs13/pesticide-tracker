@@ -34,19 +34,21 @@ class App extends Component {
     const { classes } = this.props;
     return (
       <div className="App">
-        <NavBar />
-        <div className={classes.appPages}>
-          <Router>
-            <Switch>
-              <Route exact path="/signup" component={Signup} />
-              <Route exact path="/signin" component={Signin} />
-              <Route exact path="/report" component={ReportForm} />
-              <Route exact path="/profile" component={Profile} />
-              <Route exact path="/map" component={MapView} />
-              <Route exact path="/details" component={ViewChemicals} />
-            </Switch>
-          </Router>
-        </div>
+        <Router>
+          <React.Fragment>
+            <NavBar />
+            <div className={classes.appPages}>
+              <Switch>
+                <Route exact path="/signup" component={Signup} />
+                <Route exact path="/signin" component={Signin} />
+                <Route exact path="/report" component={ReportForm} />
+                <Route exact path="/profile" component={Profile} />
+                <Route exact path="/map" component={MapView} />
+                <Route exact path="/details" component={ViewChemicals} />
+              </Switch>
+            </div>
+          </React.Fragment>
+        </Router>
       </div>
     );
   }

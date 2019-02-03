@@ -9,3 +9,6 @@
 	--form-error-color: red;
   --app-chart-color: #fff;
 }
+a {
+  text-decoration: none;
+}
