@@ -66,6 +66,9 @@ class AdditionalDetails extends Component {
           <Typography variant="h5">
             Pesticide Application Record
           </Typography>
+          <Typography variant="subtitle">
+            Field Crop Pest Management
+          </Typography>
           <div className={classes.formContainer}>
             <Typography variant="h6">
               Step 6 of 7: Enter additional information about the application.

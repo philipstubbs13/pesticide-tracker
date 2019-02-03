@@ -64,6 +64,9 @@ class DateTimeDetails extends Component {
           <Typography variant="h5">
             Pesticide Application Record
           </Typography>
+          <Typography variant="subtitle">
+            Field Crop Pest Management
+          </Typography>
           <div className={classes.formContainer}>
             <Typography variant="h6">
               Step 5 of 7: Enter the date and time of the application.
