@@ -53,6 +53,9 @@ class App extends Component {
     this.userRef = null;
     this.state = {
       user: null,
+      photoURL: '',
+      displayName: '',
+      email: '',
     };
 
     this.login = this.login.bind(this);
@@ -65,7 +68,12 @@ class App extends Component {
     // If they were, we set their user details back into the state.
     auth.onAuthStateChanged((user) => {
       if (user) {
-        this.setState({ user });
+        this.setState({
+          user,
+          photoURL: user.photoURL,
+          displayName: user.displayName,
+          email: user.email,
+        });
       }
       console.log(this.state.user);
     });
@@ -111,19 +119,30 @@ class App extends Component {
   render() {
     // ES6 destructuring
     const { classes } = this.props;
-    const { user } = this.state;
+    const { user, photoURL, displayName, email } = this.state;
     return (
       <div className="App">
         <Router>
           <React.Fragment>
             <MuiThemeProvider theme={theme}>
-              <NavBar handleLogout={this.logout} user={user} />
+              <NavBar handleLogout={this.logout} user={user} photoURL={photoURL} displayName={displayName} email={email} />
               <div className={classes.appPages}>
                 {user ? (
                   <Switch>
                     <Route exact path="/signup" component={Signup} />
                     <Route exact path="/report" component={ReportForm} />
-                    <Route exact path="/profile" component={Profile} />
+                    <Route
+                      exact
+                      path="/profile"
+                      render={props => (
+                        <Profile
+                          {...props}
+                          handleLogin={this.login}
+                          photoURL={photoURL}
+                          displayName={displayName}
+                        />
+                      )}
+                    />
                     <Route exact path="/" component={MapView} />
                     <Route exact path="/details" component={ViewChemicals} />
                     <Route component={MapView} />

@@ -12,7 +12,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Button from '@material-ui/core/Button';
 
-const styles = {
+const styles = theme => ({
   root: {
     flexGrow: 1,
   },
@@ -23,7 +23,19 @@ const styles = {
     marginLeft: -12,
     marginRight: 20,
   },
-};
+  profilePic: {
+    width: '30px',
+    height: '30px',
+    borderRadius: '50%',
+  },
+  displayName: {
+    color: '#fff',
+    marginLeft: 10,
+    [theme.breakpoints.down('xs')]: {
+      display: 'none',
+    },
+  },
+});
 
 class NavBar extends React.Component {
   state = {
@@ -44,7 +56,7 @@ class NavBar extends React.Component {
   };
 
   render() {
-    const { classes, handleLogout, user } = this.props;
+    const { classes, handleLogout, user, photoURL, displayName, email} = this.props;
     const { auth, anchorEl } = this.state;
     const open = Boolean(anchorEl);
 
@@ -67,7 +79,10 @@ class NavBar extends React.Component {
                   component={Link}
                   to="/profile"
                 >
-                  <AccountCircle />
+                  {photoURL ? <img src={photoURL} alt="profile pic" className={classes.profilePic} /> : <AccountCircle />}
+                  <Typography variant="subtitle1" className={classes.displayName}>
+                    {displayName ? `Welcome, ${displayName}` : ''}
+                  </Typography>
                 </IconButton>
                 <Button color="inherit" onClick={handleLogout} component={Link} to="/signin">Sign out</Button>
                 <Menu
